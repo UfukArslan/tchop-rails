@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get '/info', to: 'pages#info'
+  root to: 'pages#home'
+
+  get '/info', to: 'pages#info', as: 'info'
 
   resources :cities
   resources :restaurants
