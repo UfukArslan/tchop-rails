@@ -13,6 +13,7 @@ class CitiesController < ApplicationController
   # GET /cities/new
   def new
     @city = City.new
+    1.times { @city.restaurants.build }
   end
 
   # GET /cities/1/edit
@@ -64,6 +65,6 @@ class CitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def city_params
-      params.require(:city).permit(:name, :npa)
+      params.require(:city).permit(:name, :npa, restaurants_attributes: [:name, :description])
     end
 end
