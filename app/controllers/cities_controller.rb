@@ -13,7 +13,8 @@ class CitiesController < ApplicationController
   # GET /cities/new
   def new
     @city = City.new
-    1.times { @city.restaurants.build }
+    @city.restaurants.new
+    #1.times { @city.restaurants.build }
   end
 
   # GET /cities/1/edit
