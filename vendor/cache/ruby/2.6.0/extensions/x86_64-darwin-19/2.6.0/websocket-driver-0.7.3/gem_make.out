@@ -1,0 +1,15 @@
+current directory: /Users/ufuk/MAS-RAD/CAS-DAR/FRM-RoR/tchop-rails/vendor/cache/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+/Users/ufuk/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/ufuk/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210219-1091-zaoh1b.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ufuk/MAS-RAD/CAS-DAR/FRM-RoR/tchop-rails/vendor/cache/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make DESTDIR\= clean
+
+current directory: /Users/ufuk/MAS-RAD/CAS-DAR/FRM-RoR/tchop-rails/vendor/cache/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make DESTDIR\=
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/ufuk/MAS-RAD/CAS-DAR/FRM-RoR/tchop-rails/vendor/cache/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make DESTDIR\= install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20210219-1091-78hr57

@@ -11,8 +11,19 @@
     </div>
   <% end %>
 
+ <div class="field">
+    <%= form.fields_for :restaurants do |restaurants_form| %>
+        <%= restaurants_form.label :name %>
+        <%= restaurants_form.text_field :name %>
+
+        <%= restaurants_form.label :description %>
+        <%= restaurants_form.text_field :description %>
+    <% end %>
+  </div>
+
+
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :city %>
     <%= form.text_field :name %>
   </div>
 

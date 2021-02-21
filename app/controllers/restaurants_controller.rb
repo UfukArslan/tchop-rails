@@ -4,6 +4,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants or /restaurants.json
   def index
     @restaurants = Restaurant.all
+    @cities = City.all
   end
 
   # GET /restaurants/1 or /restaurants/1.json
@@ -17,6 +18,7 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1/edit
   def edit
+    @cities = City.all
   end
 
   # POST /restaurants or /restaurants.json
@@ -64,6 +66,6 @@ class RestaurantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def restaurant_params
-      params.require(:restaurant).permit(:name, :description)
+      params.require(:restaurant).permit(:name, :description, :cities)
     end
 end
