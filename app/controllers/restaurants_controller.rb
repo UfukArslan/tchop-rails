@@ -3,8 +3,15 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants or /restaurants.json
   def index
-    @restaurants = Restaurant.all
+    
+    if(params.has_key?(:city_id))
+      @restaurants = Restaurant.where("city_id = ?", params[:city_id])
+    else 
+      @restaurants = Restaurant.all
+    end 
+
     @cities = City.all
+    
   end
 
   # GET /restaurants/1 or /restaurants/1.json
