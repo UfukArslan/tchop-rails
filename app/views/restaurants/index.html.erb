@@ -37,7 +37,7 @@
     <h5>Filtre</h5>
     <div class="collection">
       <% @cities.each do |city| %>
-        <a href="#!" class="collection-item"><%= city.name %></a> 
+        <%= link_to city.name, "/", class:"collection-item" %>
       <% end %>
     </div>
   </div>
