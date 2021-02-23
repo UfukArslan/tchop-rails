@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :city %><br />
-    <%= form.select :city_id, options_for_select(@cities.map{ |c| [c.name, c.id]}, params[:city_id]) %>
+    <%= form.select :city_id, options_for_select(@cities.map{ |c| [c.name, c.id]}, :selected => @restaurant.city_id) %>
   </div>
 
   <div class="actions">

@@ -21,6 +21,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/new
   def new
     @restaurant = Restaurant.new
+    @cities = City.all
   end
 
   # GET /restaurants/1/edit
@@ -30,7 +31,10 @@ class RestaurantsController < ApplicationController
 
   # POST /restaurants or /restaurants.json
   def create
-    @restaurant = Restaurant.new(restaurant_params)
+
+    @city = City.find_by(id: restaurant_params[:city_id])
+
+    @restaurant = @city.restaurants.create(restaurant_params)
 
     respond_to do |format|
       if @restaurant.save
@@ -73,6 +77,6 @@ class RestaurantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def restaurant_params
-      params.require(:restaurant).permit(:name, :description, :cities)
+      params.require(:restaurant).permit(:name, :description, :city_id)
     end
 end
