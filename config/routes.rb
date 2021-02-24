@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/info', to: 'pages#info', as: 'info'
+  get '/search' => 'pages#search', :as => 'search_page'
 
   resources :cities
   resources :restaurants

@@ -1,1 +1,13 @@
 <h1> Welcome sur le site tchop'resto </h1> 
+
+<br><br>
+<h4> Rechercher un restaurant </h4>
+
+<%= form_tag(search_page_path, :method => "get", class: 'navbar-form navbar-left') do %>  
+<div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Ex: Pizzeria", class: "form-control" %>  
+    <div class="input-group-btn">  
+    <%= button_tag "Rechercher", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+    </div>  
+</div>  
+<% end %>
