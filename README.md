@@ -1,24 +1,8 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Tchop'rails
 
-Things you may want to cover:
+Application Rails ayant pour but de découvrir l'environnement Rails dans un premier projet, dans le cadre de la formation MAS-RAD de la HE-ARC. 
 
-* Ruby version
+L'application permet de gérer des restaurants et les villes dans lesquelles ils sont situés, puis filtrer en cliquant sur les noms des villes. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ufuk & Anthony
