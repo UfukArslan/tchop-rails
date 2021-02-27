@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
+<h1> <%= @restaurant.name %> </h1>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @restaurant.description %>
-</p>
+  <div class="row">
+    <div class="col s1"><strong>Description:</strong></div>
+    <div class="col s11"><%= @restaurant.description %></div>
+  </div>
 
-<p>
-  <strong>City:</strong>
-  <%= @restaurant.city.name %>
-</p>
+  <div class="row">
+    <div class="col s1"><strong>City:</strong></div>
+    <div class="col s11">
+      <%= link_to @restaurant.city.name, 
+            {:controller => "restaurants", 
+            :action => "index", 
+            :city_id => @restaurant.city.id}  %></div>
+  </div>
+
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>

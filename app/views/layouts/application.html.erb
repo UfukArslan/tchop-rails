@@ -9,56 +9,18 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <!-- Compiled and minified CSS 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   </head>
 
   <body>
-    <nav>
-    <div class="nav-wrapper">
-    <div class="container">
-    
-      <a href="#" class="brand-logo">Logo</a>    
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="/restaurants">Restaurants</a></li>
-        <li><a href="/cities">Cities</a></li>
-        <li><a href="/info">Infos</a></li>
-      </ul>
-    </div>
-    </div>
-  </nav>
-
-        
+    <%= render '/layouts/header' %>
 
     <div class="container" style="padding-top: 5rem;">
       <%= yield %>
     </div> 
 
-
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-large red">
-        <i class="large material-icons">add</i>
-      </a>
-      <ul>
-        <li><a class="btn-floating red" href="<%= new_city_path %>"><i class="material-icons">location_on</i></a></li>
-        <li><a class="btn-floating red darken-1" href="<%= new_restaurant_path %>"><i class="material-icons">food_bank</i></a></li>
-      </ul>
-    </div>
-  
-    <!--JavaScript at end of body for optimized loading --> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
-    <script>
-      // Materlialize init
-      M.AutoInit();       
-      // If need options : 
-      //  If you want M.AutoInit() to ignore a certain element, you can add the class .no-autoinit to the element and it will not be initialized by autoinit.
-      //  example -> var instance = M.Tabs.init(tabs, {});
-    </script>
-
+    <%= render '/layouts/footer' %>  
+    <%= render '/layouts/javascript' %>
   </body>
 </html>
