@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_21_120605) do
+ActiveRecord::Schema.define(version: 2021_02_27_140412) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,19 @@ ActiveRecord::Schema.define(version: 2021_02_21_120605) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "city_id"
     t.index ["city_id"], name: "index_restaurants_on_city_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.boolean "confirmed", default: false
+    t.string "confirmation_token"
+    t.string "password_digest"
+    t.string "firstname"
+    t.string "lastname"
+    t.boolean "avatar", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "restaurants", "cities"

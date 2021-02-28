@@ -16,9 +16,20 @@
   <body>
     <%= render '/layouts/header' %>
 
+    <% if flash[:success] %>
+      <div> <%= flash[:success] %> </div>
+    <% end %>
+    
+    <% if flash[:danger] %>
+      <div> <%= flash[:danger] %> </div>
+    <% end %>
+
     <div class="container" style="padding-top: 5rem;">
       <%= yield %>
     </div> 
+
+
+    <%= debug session[:auth] %> 
 
     <%= render '/layouts/footer' %>  
     <%= render '/layouts/javascript' %>

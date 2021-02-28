@@ -1,0 +1,45 @@
+<% if @user.errors.any? %> 
+
+    <div>
+        <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li style="color:red"> <%= message %> </li>
+            <% end %> 
+        </ul> 
+    </div>
+<% end %>
+
+
+<div>
+    <div> S'inscrire </div>
+
+    <div>   
+        <%= form_for @user, url: profil_path do |form| %>
+
+            <div class="field">
+                <%= form.label :username, 'Username' %>
+                <%= form.text_field :username %>
+            </div>
+
+            <div class="field">
+                <%= form.label :email, 'Email' %>
+                <%= form.email_field :email %>
+            </div>
+
+            <div class="field">
+                <%= form.label :password, 'Mot de passe' %>
+                <%= form.password_field :password %>
+            </div>
+
+            <div class="field">
+                <%= form.label :password_confirmation, 'Confirmer lot de passe' %>
+                <%= form.password_field :password_confirmation %>
+            </div>
+
+            <div class="actions">
+                <%= form.submit %>
+            </div>
+
+        <% end %>
+    </div>
+</div>
