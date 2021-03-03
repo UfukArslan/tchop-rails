@@ -11,5 +11,10 @@ class User < ApplicationRecord
         format: {with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/}, 
         uniqueness: {case_sensitive: false}
 
+    # converti un user en session, pour ensuite utiliser :
+    # -> session[:auth] = @user.to_session
+    def to_session
+        {id: id}
+    end 
 
 end

@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+    # accepter ces actions sans être connecté 
+    # -> skip méthode only_signed_in par défaut dans application_controller
+    skip_before_action :only_signed_in, only: [:new, :create, :confirm]
+
     def new
         @user = User.new 
     end
@@ -29,7 +33,7 @@ class UsersController < ApplicationController
             @user.update_attribute(:confirmation_token, nil)
             @user.save
 
-            session[:auth] = {id: @user.id}
+            session[:auth] = @user.to_session
             redirect_to profil_path, success: 'Votre compte a bien été confirmé'
 
         else 

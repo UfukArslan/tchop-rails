@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: %i[ show edit update destroy ]
+  skip_before_action :only_signed_in, only: [:index, :show]
 
   # GET /restaurants or /restaurants.json
   def index

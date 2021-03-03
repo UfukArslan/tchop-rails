@@ -1,4 +1,11 @@
 
+
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="<%= new_user_path %>">S'inscrire</a></li>
+  <li><a href="<%= new_session_path %>">Se connecter</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">Déconnexion</a></li>
+</ul>
     <nav>
       <div class="nav-wrapper">
         <div class="container">      
@@ -8,6 +15,8 @@
             <li><a href="/restaurants">Restaurants</a></li>
             <li><a href="/cities">Cities</a></li>
             <li><a href="/info">Infos</a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Connexion<i class="material-icons right">arrow_drop_down</i></a></li>
+    
           </ul>
         </div>
       </div>
