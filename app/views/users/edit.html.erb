@@ -11,10 +11,18 @@
 
 
 <div>
-    <div> S'inscrire </div>
+    <div> Mon profil  </div>
 
     <div>   
         <%= form_for @user, url: profil_path do |form| %>
+
+        <% if @user.avatar %>
+            <%= image_tag @user.avatar_url %>
+        <% end %>
+            <div class="field">
+                <%= form.label :avatar, 'Avatar' %>
+                <%= form.file_field :avatar_file %>
+            </div>
 
             <div class="field">
                 <%= form.label :username, 'Username' %>
@@ -27,13 +35,13 @@
             </div>
 
             <div class="field">
-                <%= form.label :password, 'Mot de passe' %>
-                <%= form.password_field :password %>
+                <%= form.label :firstname, 'Prénom' %>
+                <%= form.text_field :firstname %>
             </div>
 
             <div class="field">
-                <%= form.label :password_confirmation, 'Confirmer lot de passe' %>
-                <%= form.password_field :password_confirmation %>
+                <%= form.label :lastname, 'Nom de famille' %>
+                <%= form.text_field :lastname %>
             </div>
 
             <div class="actions">

@@ -2,7 +2,7 @@
     <div> Se connecter </div>
 
     <div>   
-        <%= form_for :user, url: sessions_path do |form| %>
+        <%= form_for :user, url: new_session_path do |form| %>
 
             <div class="field">
                 <%= form.label :username, 'Username ou email' %>

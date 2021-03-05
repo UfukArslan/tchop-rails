@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     # accepter ces actions sans être connecté 
     # -> skip méthode only_signed_in par défaut dans application_controller
     skip_before_action :only_signed_in, only: [:new, :create, :confirm]
+    before_action :only_signed_out, only: [:new, :create, :confirm]
 
     def new
         @user = User.new 
@@ -43,10 +44,21 @@ class UsersController < ApplicationController
 
 
     def edit
-        @user = User.find(session[:auth]['id'])
+        # permet de n'avoir plus qu'une requête sql 
+        #  au lieu de 2 dans le cas d'un User.find(session[:auth]['id'])
+        @user = current_user
     end
 
     def update 
+        @user = current_user
+        user_params = params.require(:user).permit(:username, :firstname, :lastname, :avatar_file, :email)
+
+
+        if @user.update(user_params)
+            redirect_to profil_path, success: 'Votre compte a bien été mis à jour'
+        else
+            render :edit
+        end 
     end 
 
 end 
