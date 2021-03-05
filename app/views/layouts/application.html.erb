@@ -16,20 +16,19 @@
   <body>
     <%= render '/layouts/header' %>
 
-    <% if flash[:success] %>
-      <div> <%= flash[:success] %> </div>
-    <% end %>
-    
-    <% if flash[:danger] %>
-      <div> <%= flash[:danger] %> </div>
-    <% end %>
-
     <div class="container" style="padding-top: 5rem;">
+      <% if flash[:success] %>
+        <div class="card-panel green lighten-2"><%= flash[:success] %></div>
+      <% end %>
+      
+      <% if flash[:danger] %>
+        <div class="card-panel  red darken-2"><%= flash[:danger] %></div>
+      <% end %>
+
       <%= yield %>
     </div> 
 
 
-    <%= debug session[:auth] %> 
 
     <%= render '/layouts/footer' %>  
     <%= render '/layouts/javascript' %>
