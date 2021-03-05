@@ -1,5 +1,10 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: %i[ show edit update destroy ]
+  
+  # évite le controle du login pour les méthodes indiquées -> voir ApplicationController
+  skip_before_action :only_signed_in, only: [:index, :show]
+
+  
 
   # GET /cities or /cities.json
   def index

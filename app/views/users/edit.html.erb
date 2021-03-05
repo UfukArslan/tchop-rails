@@ -1,0 +1,53 @@
+<% if @user.errors.any? %> 
+
+    <div>
+        <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li style="color:red"> <%= message %> </li>
+            <% end %> 
+        </ul> 
+    </div>
+<% end %>
+
+
+<div>
+    <div> Mon profil  </div>
+
+    <div>   
+        <%= form_for @user, url: profil_path do |form| %>
+
+        <% if @user.avatar %>
+            <%= image_tag @user.avatar_url %>
+        <% end %>
+            <div class="field">
+                <%= form.label :avatar, 'Avatar' %>
+                <%= form.file_field :avatar_file %>
+            </div>
+
+            <div class="field">
+                <%= form.label :username, 'Username' %>
+                <%= form.text_field :username %>
+            </div>
+
+            <div class="field">
+                <%= form.label :email, 'Email' %>
+                <%= form.email_field :email %>
+            </div>
+
+            <div class="field">
+                <%= form.label :firstname, 'Prénom' %>
+                <%= form.text_field :firstname %>
+            </div>
+
+            <div class="field">
+                <%= form.label :lastname, 'Nom de famille' %>
+                <%= form.text_field :lastname %>
+            </div>
+
+            <div class="actions">
+                <%= form.submit %>
+            </div>
+
+        <% end %>
+    </div>
+</div>

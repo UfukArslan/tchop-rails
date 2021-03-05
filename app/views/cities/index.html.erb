@@ -17,8 +17,20 @@
         <td><%= city.name %></td>
         <td><%= city.npa %></td>
         <td><%= link_to 'Show', city %></td>
-        <td><%= link_to 'Edit', edit_city_path(city) %></td>
-        <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+            
+            <!-- afficher les boutons 'edit' et 'destroy' seulement si le user est connecté --> 
+            <td>
+              <% if user_signed_in? %>     
+                <%= link_to 'Edit', edit_city_path(city) %>
+              <% end %>
+            </td>
+            <td>
+              <% if user_signed_in? %>     
+                <%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% end %>
+            </td>
+
       </tr>
     <% end %>
   </tbody>

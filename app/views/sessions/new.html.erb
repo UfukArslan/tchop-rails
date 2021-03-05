@@ -1,0 +1,24 @@
+<div>
+    <div> Se connecter </div>
+
+    <div>   
+        <%= form_for :user, url: new_session_path do |form| %>
+
+            <div class="field">
+                <%= form.label :username, 'Username ou email' %>
+                <%= form.text_field :username %>
+            </div>
+
+            <div class="field">
+                <%= form.label :password, 'Mot de passe' %>
+                <%= form.password_field :password %>
+            </div>
+
+
+            <div class="actions">
+                <%= form.submit %>
+            </div>
+
+        <% end %>
+    </div>
+</div>

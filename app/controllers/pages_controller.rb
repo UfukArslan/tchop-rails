@@ -1,4 +1,7 @@
 class PagesController < ApplicationController 
+  
+  # évite le controle du login pour les méthodes indiquées -> voir ApplicationController
+  skip_before_action :only_signed_in
 
   def info
 
