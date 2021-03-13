@@ -57,6 +57,7 @@ Pour tester les services CRUD, voir le chapitre suivant.
 ### Test avec un utilisateur connecté
 
 __Utilisateur existant__
+
 Un utilisateur user1 est créé par la commande rails db:seed, afin de pouvoir tester les fonctionnalités CRUD de l'application. 
 Username : __user1__
 Password : __1234__ 
@@ -110,6 +111,3 @@ Github
 Une multitides de fonctionnalités pourraient ensuite améliorer l'application. En voici quelques unes : 
 * Ajouter les services proposés par les établissements et pouvoir rechercher par rapports à ces services (livraison, plats à emporter, brunch, etc.)
 * Une gestion des horaires d'ouverture permettrait d'afficher les établissements ouverts au moment où l'on accède à l'application. 
-
-
-Ufuk & Anthony
