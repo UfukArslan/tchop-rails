@@ -32,7 +32,7 @@ La page d'accueil de l'application propose un champ de recherche. Celui-ci perme
 
 Exemple, recherche du mot "Pizzeria" : 
 
-![search_result](doc/search_result.jpg.jpg)
+![search_result](doc/search_result.jpg)
 
 L'onglet "Restaurant" propose toute la liste des restaurants, ainsi qu'une liste des villes sur la partie de droite permettant de filter sur les villes existantes. 
 
@@ -55,6 +55,13 @@ Pour tester les services CRUD, voir le chapitre suivant.
 
 
 ### Test avec un utilisateur connecté
+
+__Utilisateur existant__
+Un utilisateur user1 est créé par la commande rails db:seed, afin de pouvoir tester les fonctionnalités CRUD de l'application. 
+Username : __user1__
+Password : __1234__ 
+
+
 __Nouvel utilisateur :__ Se rendre sur l'onglet "Connexion > S'inscrire" pour créer un compte. 
 Un email est envoyé à l'adresse email que l'utilisateur renseigne lors de son inscription. Il doit ensuite valider l'adresse email en cliquant sur un lien qui contient un token. 
 
@@ -66,10 +73,6 @@ Nous avons utilisé Maildev lors de notre développement.
 ![MailDev](doc/MailDev.jpg)
 
 
-__Utilisateur existant__
-Un utilisateur user1 est créé par la commande rails db:seed, afin de pouvoir tester les fonctionnalités CRUD de l'application. 
-Username : __user1__
-Password : __1234__ 
 
 __Une fois connecté__
 Les boutons "Edit" et "Destroy" apparaissent dans les listes. 
