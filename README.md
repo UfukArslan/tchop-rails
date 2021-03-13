@@ -32,7 +32,7 @@ La page d'accueil de l'application propose un champ de recherche. Celui-ci perme
 
 Exemple, recherche du mot "Pizzeria" : 
 
-![search_result](doc/search_result.jpg.jpg)
+![search_result](doc/search_result.jpg)
 
 L'onglet "Restaurant" propose toute la liste des restaurants, ainsi qu'une liste des villes sur la partie de droite permettant de filter sur les villes existantes. 
 
