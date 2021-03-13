@@ -23,3 +23,5 @@ Restaurant.create(name: 'Pizzeria Chez Maurice', description: 'Traiteur régiona
 Restaurant.create(name: 'Brasserie de la fontaine', description: 'Brasserie', city_id: 3)
 Restaurant.create(name: 'Sakura', description: 'Chinois', city_id: 2)
 Restaurant.create(name: 'Pékin express', description: 'Chinois', city_id: 2)
+
+User.create(username: 'user1', email: 'user1@ne.ch', confirmed: '1', password_digest: '$2a$12$lMw11BjP2kipLDMkTNHO.ubo9Kl9BJaPVrNG3AFktoWjUcDU1I/GG', firstname: 'Valentina', lastname: 'Dalinelli', avatar: '0')
