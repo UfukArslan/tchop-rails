@@ -56,14 +56,15 @@ Pour tester les services CRUD, voir le chapitre suivant.
 
 ### Test avec un utilisateur connecté
 
-__Utilisateur existant__
+__Utilisateur existant :__
 
 Un utilisateur user1 est créé par la commande rails db:seed, afin de pouvoir tester les fonctionnalités CRUD de l'application. 
-Username : __user1__
+Username : __user1__ 
 Password : __1234__ 
 
 
-__Nouvel utilisateur :__ Se rendre sur l'onglet "Connexion > S'inscrire" pour créer un compte. 
+__Nouvel utilisateur :__ 
+Se rendre sur l'onglet "Connexion > S'inscrire" pour créer un compte. 
 Un email est envoyé à l'adresse email que l'utilisateur renseigne lors de son inscription. Il doit ensuite valider l'adresse email en cliquant sur un lien qui contient un token. 
 
 Une ressource recevant les emails sur le port 1025 doit être installée en local. 
