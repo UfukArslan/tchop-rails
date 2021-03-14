@@ -90,6 +90,7 @@ Les urls ne redirigent plus sur la page d'inscription avec un message d'erreur s
 
 * Maildev (Test des emails) : https://github.com/maildev/maildev
 * Materialize (CSS et composants JS) : https://materializecss.com/
+* StandardRB (formattage et mise en page du code) : https://github.com/testdouble/standard
 * Melvinchng (Tutoriel Installation locale de Rails Windows et Mac) : https://melvinchng.github.io/rails/WindowsInstallationV2.2.3.html#chapter-1-windows-installation-guide-for-ruby-22x
 * Grafikart (Tutoriel gestion des utilisateurs) : https://grafikart.fr/tutoriels/tp-users-854
 * SQLiteStudio : https://sqlitestudio.pl/
