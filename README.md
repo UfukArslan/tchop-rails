@@ -64,6 +64,7 @@ Password : __1234__
 
 
 __Nouvel utilisateur :__ 
+
 Se rendre sur l'onglet "Connexion > S'inscrire" pour créer un compte. 
 Un email est envoyé à l'adresse email que l'utilisateur renseigne lors de son inscription. Il doit ensuite valider l'adresse email en cliquant sur un lien qui contient un token. 
 
