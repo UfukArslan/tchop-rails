@@ -59,7 +59,9 @@ Pour tester les services CRUD, voir le chapitre suivant.
 __Utilisateur existant :__
 
 Un utilisateur user1 est créé par la commande rails db:seed, afin de pouvoir tester les fonctionnalités CRUD de l'application. 
+
 Username : __user1__ 
+
 Password : __1234__ 
 
 
