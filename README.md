@@ -59,10 +59,8 @@ Pour tester les services CRUD, voir le chapitre suivant.
 __Utilisateur existant :__
 
 Un utilisateur user1 est créé par la commande rails db:seed, afin de pouvoir tester les fonctionnalités CRUD de l'application. 
-
-Username : __user1__ 
-
-Password : __1234__ 
+* Username : __user1__ 
+* Password : __1234__ 
 
 
 __Nouvel utilisateur :__ 
@@ -103,10 +101,11 @@ SQLiteStudio permet de visualiser la base de données SQLite de l'application, c
 
 <a name="retour"></a>
 ## Retour sur le projet
-Materialize et Maildev 
-Github 
 
 Le projet nous a permis d’acquérir les bases nécessaires du framework ainsi que certaines de ses subtilités. En effet, l’intuitivité du codage qui se trouve dans la syntaxe peu verbeuse ainsi que dans les conventions de Rails ont permis de développer des fonctionnalités rapides. De ce fait, c’est une technologie qui demande une prise en main dans premier temps mais qui devient de plus en plus intéressante à l’utilisation et facile.
+
+En plus de Rails et du langage Ruby, le projet à permis de se familiariser avec Materialize, découvert lors du cours sur Laravel, plutôt que l'habituel Bootstrap que nous avons souvent utilisé, puis mettre en pratique les tests d'email avec un outil comme Maildev. 
+L'utilisation de Github, outil indispensable de nos jours dans le développement, a également été un atout de ce projet à deux. 
 
 
 <a name="amelioration"></a>
