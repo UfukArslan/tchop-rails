@@ -102,6 +102,7 @@ SQLiteStudio permet de visualiser la base de données SQLite de l'application, c
 ## Retour sur le projet
 Materialize et Maildev 
 Github 
+* Le projet nous a permis d’acquérir les bases nécessaires du framework ainsi que certaines de ses subtilités. En effet, l’intuitivité du codage qui se trouve dans la syntaxe peu verbeuse ainsi que dans les conventions de Rails ont permis de développer des fonctionnalités rapides. De ce fait, c’est une technologie qui demande une prise en main dans premier temps mais qui devient de plus en plus intéressante à l’utilisation et facile
 
 
 <a name="amelioration"></a>
@@ -112,3 +113,6 @@ Github
 Une multitides de fonctionnalités pourraient ensuite améliorer l'application. En voici quelques unes : 
 * Ajouter les services proposés par les établissements et pouvoir rechercher par rapports à ces services (livraison, plats à emporter, brunch, etc.)
 * Une gestion des horaires d'ouverture permettrait d'afficher les établissements ouverts au moment où l'on accède à l'application. 
+* Intégration d'une map pour la localisation du restaurant.
+* Indication d'appréciation (étoiles) + les commentaires.
+
