@@ -1,10 +1,8 @@
 class CitiesController < ApplicationController
-  before_action :set_city, only: %i[ show edit update destroy ]
-  
+  before_action :set_city, only: %i[show edit update destroy]
+
   # évite le controle du login pour les méthodes indiquées -> voir ApplicationController
   skip_before_action :only_signed_in, only: [:index, :show]
-
-  
 
   # GET /cities or /cities.json
   def index
@@ -19,7 +17,7 @@ class CitiesController < ApplicationController
   def new
     @city = City.new
     @city.restaurants.new
-    #1.times { @city.restaurants.build }
+    # 1.times { @city.restaurants.build }
   end
 
   # GET /cities/1/edit
@@ -64,13 +62,14 @@ class CitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_city
-      @city = City.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def city_params
-      params.require(:city).permit(:name, :npa, restaurants_attributes: [:name, :description])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_city
+    @city = City.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def city_params
+    params.require(:city).permit(:name, :npa, restaurants_attributes: [:name, :description])
+  end
 end

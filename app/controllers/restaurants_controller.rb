@@ -1,18 +1,16 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: %i[ show edit update destroy ]
+  before_action :set_restaurant, only: %i[show edit update destroy]
   skip_before_action :only_signed_in, only: [:index, :show]
 
   # GET /restaurants or /restaurants.json
   def index
-    
-    if(params.has_key?(:city_id))
-      @restaurants = Restaurant.where("city_id = ?", params[:city_id])
-    else 
-      @restaurants = Restaurant.all
-    end 
+    @restaurants = if params.has_key?(:city_id)
+      Restaurant.where("city_id = ?", params[:city_id])
+    else
+      Restaurant.all
+    end
 
     @cities = City.all
-    
   end
 
   # GET /restaurants/1 or /restaurants/1.json
@@ -32,7 +30,6 @@ class RestaurantsController < ApplicationController
 
   # POST /restaurants or /restaurants.json
   def create
-
     @city = City.find_by(id: restaurant_params[:city_id])
 
     @restaurant = @city.restaurants.create(restaurant_params)
@@ -71,13 +68,14 @@ class RestaurantsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_restaurant
-      @restaurant = Restaurant.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def restaurant_params
-      params.require(:restaurant).permit(:name, :description, :city_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_restaurant
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :description, :city_id)
+  end
 end
