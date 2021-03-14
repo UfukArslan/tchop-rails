@@ -56,13 +56,16 @@ Pour tester les services CRUD, voir le chapitre suivant.
 
 ### Test avec un utilisateur connecté
 
-__Utilisateur existant__
+__Utilisateur existant :__
+
 Un utilisateur user1 est créé par la commande rails db:seed, afin de pouvoir tester les fonctionnalités CRUD de l'application. 
-Username : __user1__
-Password : __1234__ 
+* Username : __user1__ 
+* Password : __1234__ 
 
 
-__Nouvel utilisateur :__ Se rendre sur l'onglet "Connexion > S'inscrire" pour créer un compte. 
+__Nouvel utilisateur :__ 
+
+Se rendre sur l'onglet "Connexion > S'inscrire" pour créer un compte. 
 Un email est envoyé à l'adresse email que l'utilisateur renseigne lors de son inscription. Il doit ensuite valider l'adresse email en cliquant sur un lien qui contient un token. 
 
 Une ressource recevant les emails sur le port 1025 doit être installée en local. 
@@ -98,8 +101,11 @@ SQLiteStudio permet de visualiser la base de données SQLite de l'application, c
 
 <a name="retour"></a>
 ## Retour sur le projet
-Materialize et Maildev 
-Github 
+
+Le projet nous a permis d’acquérir les bases nécessaires du framework ainsi que certaines de ses subtilités. En effet, l’intuitivité du codage qui se trouve dans la syntaxe peu verbeuse ainsi que dans les conventions de Rails ont permis de développer des fonctionnalités rapides. De ce fait, c’est une technologie qui demande une prise en main dans premier temps mais qui devient de plus en plus intéressante à l’utilisation et facile.
+
+En plus de Rails et du langage Ruby, le projet à permis de se familiariser avec Materialize, découvert lors du cours sur Laravel, plutôt que l'habituel Bootstrap que nous avons souvent utilisé, puis mettre en pratique les tests d'email avec un outil comme Maildev. 
+L'utilisation de Github, outil indispensable de nos jours dans le développement, a également été un atout de ce projet à deux. 
 
 
 <a name="amelioration"></a>
@@ -110,6 +116,6 @@ Github
 Une multitides de fonctionnalités pourraient ensuite améliorer l'application. En voici quelques unes : 
 * Ajouter les services proposés par les établissements et pouvoir rechercher par rapports à ces services (livraison, plats à emporter, brunch, etc.)
 * Une gestion des horaires d'ouverture permettrait d'afficher les établissements ouverts au moment où l'on accède à l'application. 
+* Intégration d'une map pour la localisation du restaurant.
+* Indication d'appréciation (étoiles) + les commentaires.
 
-
-Ufuk & Anthony
